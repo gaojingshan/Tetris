@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            text-align: center;
+            margin-top: 10px;
+            background-color: rgba(0, 0, 0, 0.589);
+        }
+
+        td {
+            width: 30px;
+            height: 30px;
+            border: 1px solid #000;
+        }
+
+        td.c1 {
+            background: -webkit-linear-gradient(bottom right, rgb(182, 44, 44), rgb(250, 6, 6));
+        }
+
+        td.c2 {
+            background: -webkit-linear-gradient(bottom right, rgb(255, 157, 0), rgb(230, 201, 42));
+        }
+
+        td.c3 {
+            background: -webkit-linear-gradient(bottom right, rgb(239, 243, 6), rgb(213, 243, 41));
+        }
+
+        td.c4 {
+            background: -webkit-linear-gradient(bottom right, rgb(11, 246, 3), rgb(94, 235, 129));
+        }
+
+        td.c5 {
+            background: -webkit-linear-gradient(bottom right, rgb(0, 225, 255), rgb(62, 233, 248));
+        }
+
+        td.c6 {
+            background: -webkit-linear-gradient(bottom right, rgb(0, 98, 255), rgb(79, 137, 243));
+        }
+
+        td.c7 {
+            background: -webkit-linear-gradient(bottom right, rgb(98, 0, 255), rgb(146, 78, 235));
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn1">让0行0列的格变红</button>
+    <button id="btn2">让2行1列的格变蓝</button>
+    <button id="btn3">让3行2列的格变橙</button>
+    <table id="table">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+        </tr>
+    </table>
+    <script>
+        // 得到按钮
+        var btn1 = document.getElementById('btn1');
+        var btn2 = document.getElementById('btn2');
+        var btn3 = document.getElementById('btn3');
+        // 得到表格
+        var table = document.getElementById('table');
+        
+        function bianse(a, b, yanse) {
+            table.getElementsByTagName('tr')[a].getElementsByTagName('td')[b].className = 'c' + yanse;
+        }
+        btn1.onclick = function () {
+            bianse(0, 0, 1)
+        }
+        btn2.onclick = function () {
+            bianse(2, 1, 6)
+        }
+        btn3.onclick = function () {
+            bianse(3, 2, 2)
+        }
+    </script>
+</body>
+
+</html>
