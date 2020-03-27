@@ -8,12 +8,12 @@
     <style>
         table {
             border-collapse: collapse;
-            background-color: rgba(19, 18, 18, 0.486);
+            background-color: rgba(17, 17, 17, 0.603);
         }
 
         td {
-            width: 20px;
-            height: 20px;
+            width: 30px;
+            height: 30px;
             border: 1px solid #000;
         }
 
@@ -523,7 +523,6 @@
                 }
             }
             if (canDown) {
-
                 row++;
             } else {
                 for (var i = 0; i < 4; i++) {
@@ -534,6 +533,7 @@
                     }
                 }
                 row = 0;
+                col = 4;
                 randomBlock();
             }
 
